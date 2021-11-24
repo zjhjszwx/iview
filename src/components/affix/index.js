@@ -1,2 +1,2 @@
-import Affix from './affix.vue';
+import Affix from './_affix.vue';
 export default Affix;

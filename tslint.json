@@ -1,8 +1,12 @@
 {
     "defaultSeverity": "warning",
-    "extends": ["tslint:recommended"],
+    "extends": [
+        "tslint:recommended"
+    ],
     "linterOptions": {
-        "exclude": ["node_modules/**"]
+        "exclude": [
+            "node_modules/**"
+        ]
     },
     "rules": {
         "jsx-boolean-value": false,
@@ -13,25 +17,50 @@
         "jsx-no-lambda": true,
         "jsx-no-string-ref": false,
         "class-name": false,
-        "max-line-length": [true, 180],
-        "member-ordering": [true, "statics-first"],
+        "max-line-length": [
+            true,
+            180
+        ],
+        "member-ordering": [
+            true,
+            "statics-first"
+        ],
         "new-parens": true,
         "no-consecutive-blank-lines": true,
         "no-mergeable-namespace": true,
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": true,
-        "no-unused-variable": [true],
+        "no-unused-variable": [
+            true
+        ],
         "no-var-keyword": true,
-        "one-variable-per-declaration": [false, "ignore-for-loop"],
-        "triple-equals": [false, "allow-null-check"],
+        "one-variable-per-declaration": [
+            false,
+            "ignore-for-loop"
+        ],
+        "triple-equals": [
+            false,
+            "allow-null-check"
+        ],
         "use-isnan": false,
         //ts专用
         "prefer-const": false, //true, //const偏好
         "adjacent-overload-signatures": true, //Enforces function overloads to be consecutive.
         "ban-comma-operator": true, //禁止逗号运算符。
-        "ban-type": [true, ["object", "User {} instead."], ["string"]], //禁止类型
+        "ban-type": [
+            true,
+            [
+                "object",
+                "User {} instead."
+            ],
+            [
+                "string"
+            ]
+        ], //禁止类型
         //"member-access": [true, "no-public" || "check-accessor" || "check-constructor" || "check-parameter-property"], //类成员必须声明 private public ....
-        "member-order": [false], //类声明排序
+        "member-order": [
+            false
+        ], //类声明排序
         "no-any": false, //true, //不需使用any类型
         "no-empty-interface": true, //禁止空接口 {}
         "no-import-side-effect": [
@@ -40,7 +69,11 @@
                 "ignore-module": "(\\.html|\\.css)$"
             }
         ], //禁止导入带有副作用的语句
-        "no-inferrable-types": [true, "ignore-params", "ignore-properties"], //不允许将变量或参数初始化为数字,字符串或布尔值的显式类型声明。
+        "no-inferrable-types": [
+            true,
+            "ignore-params",
+            "ignore-properties"
+        ], //不允许将变量或参数初始化为数字,字符串或布尔值的显式类型声明。
         "no-internal-module": true, //不允许内部模块
         "no-magic-numbers": false, //[true, 1, 2, 3], //不允许在变量赋值之外使用常量数值。当没有指定允许值列表时,默认允许-1,0和1
         "no-namespace": false, //[true, "allpw-declarations"], //不允许使用内部modules和命名空间
@@ -85,7 +118,11 @@
         "no-arg": true, //不允许使用 argument.callee
         "no-bitwise": false, //true, //不允许使用按位运算符
         "no-conditional-assignmen": true, //不允许在do-while/for/if/while判断语句中使用赋值语句
-        "no-console": [true, "time", "timeEnd"], //不能使用console
+        "no-console": [
+            false,
+            "time",
+            "timeEnd"
+        ], //不能使用console
         "no-construct": true, //不允许使用 String/Number/Boolean的构造函数
         "no-debugger": true, //不允许使用debugger
         "no-duplicate-super": true, //构造函数两次用super会发出警告
@@ -102,7 +139,12 @@
         "no-object-literal-type-assertion": false, //true, //禁止objext出现在类型断言表达式中
         "no-return-await": true, //不允许return await
         "arrow-parens": false, //true, //箭头函数定义的参数需要括号
-        "quotemark": [true, "single", "jsx-double", "avoid-escape"], //引号的使用规则
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double",
+            "avoid-escape"
+        ], //引号的使用规则
         "semicolon": false, //[true, "never", "ignore-interfaces"], //分号的使用规则
         "indent": false, //[true, "tabs", 2], //使用Tab进行缩进，每次强制缩进2个字符
         "whitespace": [

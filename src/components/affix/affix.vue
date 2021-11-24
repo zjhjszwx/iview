@@ -3,6 +3,7 @@
         <div ref="point" :class="classes" :style="styles">
             <slot></slot>
         </div>
+        <!-- ??? -->
         <div v-show="slot" :style="slotStyle"></div>
     </div>
 </template>
@@ -19,7 +20,6 @@
         if (typeof ret !== 'number') {
             ret = window.document.documentElement[method];
         }
-
         return ret;
     }
 
@@ -32,7 +32,6 @@
         const docEl = window.document.body;
         const clientTop = docEl.clientTop || 0;
         const clientLeft = docEl.clientLeft || 0;
-
         return {
             top: rect.top + scrollTop - clientTop,
             left: rect.left + scrollLeft - clientLeft
@@ -80,8 +79,6 @@
             }
         },
         mounted () {
-//            window.addEventListener('scroll', this.handleScroll, false);
-//            window.addEventListener('resize', this.handleScroll, false);
             on(window, 'scroll', this.handleScroll, this.useCapture);
             on(window, 'resize', this.handleScroll, this.useCapture);
             this.$nextTick(() => {
@@ -89,8 +86,6 @@
             });
         },
         beforeDestroy () {
-//            window.removeEventListener('scroll', this.handleScroll, false);
-//            window.removeEventListener('resize', this.handleScroll, false);
             off(window, 'scroll', this.handleScroll, this.useCapture);
             off(window, 'resize', this.handleScroll, this.useCapture);
         },
