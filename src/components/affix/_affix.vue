@@ -71,7 +71,7 @@ export default {
         handleScroll() {
             const scrollTop = getScroll(window);
             const elOffset = getOffset(this.$el);
-            console.log(scrollTop, elOffset.top);
+            // console.log(scrollTop, elOffset.top);
             if(scrollTop > elOffset.top) {
                 this.affix = true;
                 this.styles = {

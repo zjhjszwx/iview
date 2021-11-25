@@ -1,6 +1,19 @@
+<!--
+ @click.prevent 相对于调用event.preventDefault(), a标签的默认跳转触发
+
+-->
 <template>
 	<div :class="anchorLinkClasses">
-        <a :class="linkTitleClasses" :href="href" :data-scroll-offset="scrollOffset" :data-href="href" @click.prevent="goAnchor" :title="title">{{ title }}</a>
+        <a
+            :class="linkTitleClasses"
+            :href="href"
+            :data-scroll-offset="scrollOffset"
+            :data-href="href"
+            @click.prevent="goAnchor"
+            :title="title"
+        >
+            {{ title }}
+        </a>
         <slot></slot>
     </div>
 </template>

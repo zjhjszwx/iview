@@ -2,6 +2,7 @@
     <component :is="wrapperComponent" :offset-top="offsetTop" :offset-bottom="offsetBottom" @on-change="handleAffixStateChange">
 		<div :class="`${prefix}-wrapper`" :style="wrapperStyle">
             <div :class="`${prefix}`">
+                <!--小圆点-->
                 <div :class="`${prefix}-ink`">
                     <span v-show="showInk" :class="`${prefix}-ink-ball`" :style="{top: `${inkTop}px`}"></span>
                 </div>
@@ -45,16 +46,19 @@ export default {
             default: 0
         },
         offsetBottom: Number,
+        // 锚点边界区域
         bounds: {
             type: Number,
             default: 5
         },
-//        container: [String, HTMLElement],  // HTMLElement 在 SSR 下不支持
+        // 制定的滚动容器
         container: null,
+        // 是否显示小圆点
         showInk: {
             type: Boolean,
             default: false
         },
+        // 点击滚动的额外距离
         scrollOffset: {
             type: Number,
             default: 0
@@ -86,7 +90,11 @@ export default {
         },
         handleHashChange () {
             const url = window.location.href;
+            // 匹配#后面的路径
             const sharpLinkMatch = sharpMatcherRegx.exec(url);
+
+            // console.log(sharpLinkMatch);
+            // ['#title-151', 'title-151', index: 28, input: 'http://localhost:8081/anchor#title-151', groups: undefined]
             if (!sharpLinkMatch) return;
             this.currentLink = sharpLinkMatch[0];
             this.currentId = sharpLinkMatch[1];
@@ -159,7 +167,6 @@ export default {
             off(window, 'hashchange', this.handleHashChange);
         },
         init () {
-            // const anchorLink = findComponentDownward(this, 'AnchorLink');
             this.handleHashChange();
             this.$nextTick(() => {
                 this.removeListener();

@@ -1,5 +1,7 @@
+// 转义 相当于 ivu-anchor
 @anchor-prefix: ~"@{css-prefix}anchor";
 
+// 选择器插值 相当于 .ivu-anchor
 .@{anchor-prefix}{
     &-wrapper{
         overflow: auto;
@@ -9,7 +11,7 @@
 
     &{
         position: relative;
-        padding-left: @anchor-border-width;
+        padding-left: @anchor-border-width; // 2px
 
         &-ink {
             position: absolute;

@@ -1,6 +1,7 @@
 <template>
     <transition name="fade">
         <div v-if="!closed" :class="wrapClasses">
+            <!--显示图标-->
             <span :class="iconClasses" v-if="showIcon">
                 <slot name="icon">
                     <Icon :type="iconType"></Icon>
@@ -8,6 +9,7 @@
             </span>
             <span :class="messageClasses"><slot></slot></span>
             <span :class="descClasses"><slot name="desc"></slot></span>
+            <!--关闭图标-->
             <a :class="closeClasses" v-if="closable" @click="close">
                 <slot name="close">
                     <Icon type="ios-close"></Icon>
@@ -26,6 +28,7 @@
         name: 'Alert',
         components: { Icon },
         props: {
+            // 警示框样式
             type: {
                 validator (value) {
                     return oneOf(value, ['success', 'info', 'warning', 'error']);

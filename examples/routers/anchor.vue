@@ -76,7 +76,7 @@ export default {
             scrollCon: '',
             con: 'div',
             showNewLink: false
-        }
+        };
     },
     methods: {
         changeCon () {
@@ -84,19 +84,19 @@ export default {
             this.scrollCon = undefined;
         },
         handleChange (newHref, oldHref) {
-            console.log(`${oldHref} => ${newHref}`)
+            // console.log(`${oldHref} => ${newHref}`)
         },
         handleSelect (href) {
-            console.log(`select ${href}`)
+            // console.log(`select ${href}`)
         },
         andLink () {
             this.showNewLink = true;
         }
     },
     mounted () {
-        this.scrollCon = this.$refs.listWrapper
+        this.scrollCon = this.$refs.listWrapper;
     }
-}
+};
 </script>
 <style lang="less">
 .anchor-wrapper{

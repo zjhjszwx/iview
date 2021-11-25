@@ -1,5 +1,5 @@
-@alert-prefix-cls: ~"@{css-prefix}alert";
-@icon-prefix-cls: ~"@{css-prefix}icon";
+@alert-prefix-cls: ~"@{css-prefix}alert"; // ivu-alert
+@icon-prefix-cls: ~"@{css-prefix}icon";  // ivu-icon
 
 .@{alert-prefix-cls}{
     position: relative;
@@ -10,7 +10,7 @@
     line-height: 16px;
     margin-bottom: 10px;
 
-    &&-with-icon{
+    &-with-icon{
         padding: 8px 48px 8px 38px;
     }
 
@@ -78,9 +78,10 @@
         line-height: 1.5;
     }
 
-    &-with-desc&-with-icon{
+    &-with-desc&-with-icon{ //相对于 ivu-alert-with-icon ivu-alert-with-desc 同时存在
         padding: 16px 16px 16px 69px;
     }
+
 
     &-with-desc &-desc{
         display: block;
